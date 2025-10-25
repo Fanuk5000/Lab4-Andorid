@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
 
-    <string name="last_name">Maksymchuk</string>
+    <string name="last_name">Illia Maksymchuk</string>
     <string name="flag_description">National Flag of the United Kingdom</string>
     <string name="coat_of_arms_description">Royal Coat of Arms of the United Kingdom</string>
 </resources>
