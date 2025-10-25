@@ -47,41 +47,35 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(modifier: Modifier = Modifier) { // Ми більше не передаємо 'name'
+fun Greeting(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
         Column(
-            // Центруємо вміст колонки (зображення і текст)
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            // 1. Рядок для прапора та герба
             Row(
-                // Додає відступ 16.dp між елементами
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                // ПРАПОР
+                // flag
                 Image(
                     painter = painterResource(id = R.drawable.flag),
                     contentDescription = stringResource(id = R.string.flag_description),
-                    modifier = Modifier.size(120.dp) // Розмір прапора
+                    modifier = Modifier.size(120.dp)
                 )
-                // ГЕРБ
+                // coat_of_arms
                 Image(
                     painter = painterResource(id = R.drawable.coat_of_arms),
                     contentDescription = stringResource(id = R.string.coat_of_arms_description),
-                    modifier = Modifier.size(120.dp) // Розмір герба
+                    modifier = Modifier.size(120.dp)
                 )
             }
 
-            // 2. Відступ між зображеннями та текстом
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 3. Прізвище (з ресурсів)
             Text(
-                // Завантажуємо текст з R.string.last_name
                 text = stringResource(id = R.string.last_name),
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold
